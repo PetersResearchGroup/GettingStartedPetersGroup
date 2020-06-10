@@ -1,0 +1,54 @@
+#Getting access to the group server and installing software. 
+
+#1. If you are going to access the server from off campus, you will need to install the LaTech VPN client. This will make the server think you are on campus. 
+
+#Go to https://techvpn.latech.edu/ and login with your LaTech username and password. Install the GlobalProtect agent for your OS. You can run that to connect to the VPN. This is not necessary if you are on campus. 
+
+
+#2. Run a remote desktop program. Windows includes "remote desktop connection".
+
+#Connect to 138.47.29.84
+
+#If you click the down arrow below the computer name you can input your username so that you don't have to enter it everytime. 
+
+#You should see a black screen with a window that says Login to xrdp. Change the username to your username and put in your password. 
+
+
+#3. Open a terminal using ctrl-alt-t or by clicking on the icon that looks like a block box with $_ at the bottom of the screen. 
+
+
+#4. Install MiniConda; a software suite for organizing python code. Execute the following code:
+
+cd Downloads #change directory to Downloads
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh #Download file to install Miniconda
+
+chmod +x Miniconda3-latest-Linux-x86_64.sh #allow the file to be run
+
+./Miniconda3-latest-Linux-x86_64.sh #run the file
+
+#Follow the instructions on the screen to install miniconda. Just press enter unless it reuires an answer, in which case just enter yes. 
+
+#Close and reopen the terminal. This allows the terminal to find conda now. 
+
+
+# 5. Install hoomd and gsd python code. In that terminal enter the following code. More details can be found in the hoomd documentation: https://hoomd-blue.readthedocs.io/en/stable/installation.html
+
+conda install -c conda-forge hoomd gsd
+
+#This will take some time. Press enter when required. 
+
+# 6. Run hoomd tutorials. https://nbviewer.jupyter.org/github/joaander/hoomd-examples/blob/master/index.ipynb
+
+# Hoomd runs in python. In the terminal type python, then you will be able to enter to code in the tutorials. Do the Lennard-Jones and DPD polymers tutorials. 
+
+# For the tutorials, enter conde into python in the terminal is fine. When you actually running simualtions you will want to create a script and run the script with
+
+python script.py
+
+# in the terminal, where "script.py" is the name of the script. Everything you enter in the terminal in the tutorials will need to be in the script. When you're actually running simulations, make sure you save every script you run so we can refer back to it later. 
+
+
+
+
+
